@@ -1,0 +1,74 @@
+@import '../abstracts/variables';
+
+.hero-section {
+    padding-top: $gap-lx;
+    padding-bottom: 140px;
+    @extend .header-bg; 
+
+    .wrapper {
+        h1 {
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 78px;
+        }
+
+        p {
+            color: $nickel-color;
+            font-weight: 400;
+            font-size: $font-size;
+            line-height: 26px;
+            max-width: 540px;
+            padding: 60px 0 65px;
+        }
+    }
+}
+
+@media (max-width: 599px)
+{
+    .hero-section {
+        padding: 0 0 20px;
+
+        .wrapper {
+            h1 {
+                font-size: 28px; 
+                line-height: 35px;
+            }
+
+            p {
+                max-width: 540px; 
+                padding: 30px 0 30px;
+            }
+
+            .btn-contact {
+                padding: 15px 30px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .hero-section {
+        padding-top: 40px;
+        padding-bottom: 80px;
+  
+        .wrapper {
+          h1 {
+            font-size: 28px;
+            line-height: 35px;
+          }
+  
+          p {
+            max-width: 540px;
+            padding: 30px 0 30px;
+          }
+  
+          .btn-contact {
+            padding: 15px 30px;
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+    }
+}

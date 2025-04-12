@@ -1,0 +1,25 @@
+@mixin button($padding-y, $padding-x, $bg-color, $font-size, $font-weight, $line-height, $color, $border: none, $cursor: pointer, $transition: opacity 0.3s) {
+    padding: $padding-y $padding-x;
+    background-color: $bg-color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+    border: $border;
+    cursor: $cursor;
+    transition: $transition;
+  
+    &:hover {
+      opacity: 0.6;
+      transition: .3s;
+    }
+}
+
+
+@mixin center-content($direction: column, $justify: center, $align: center)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

@@ -1,0 +1,6 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.btn-contact {
+    @include button(19px, 41px, $steel-blue, $font-size, 400, 26px, $white-color);
+}

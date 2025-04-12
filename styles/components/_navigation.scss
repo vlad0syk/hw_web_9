@@ -1,0 +1,80 @@
+@import '../abstracts/variables';
+
+header {
+  padding: $gap-lx;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style: none;
+    gap: $gap;
+
+    a {
+      text-decoration: none;
+      color: $black-color;
+
+      &:hover {
+        color: $steel-blue;
+        transition: 0.3s linear;
+      }
+    }
+  }
+
+  .responsive-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  header {
+    padding: 10px 10px 10px 0;
+
+    .main-nav {
+      display: none;
+      position: relative;
+    }
+
+    .responsive-menu {
+      display: block;
+      padding: 0;
+    }
+
+    .hamburger-btn {
+      cursor: pointer;
+      font-size: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .responsive-nav {
+      display: none;
+      position: absolute;
+      width: 100%;
+      background: lightgray;
+      opacity: 0.9;
+    }
+
+    input {
+      opacity: 0;
+    }
+
+    #toggle:checked ~ .responsive-nav {
+      display: block;
+      width: 100%;
+      padding: 40px 0 20px 50px;
+      top: 0;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $gap;
+        align-items: flex-start;
+      }
+    }
+  }
+}
